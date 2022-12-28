@@ -1,11 +1,11 @@
 /**
- * Ce package est considerer comem le package "racine" par Spring, il contient
- * la classe "application" avec la methode main.
+ * Ce package est considerer comme le package "racine" par Spring, il contient
+ * la classe "application" avec la methode "main".
  * <p>
  * Comme tout programme Java la methode main est le point d'entree de
  * l'application.
  * <p>
- * Au demarrage, Spring va scanner l'ensemble des classes à partir de ce package
+ * Au demarrage, Spring va scanner l'ensemble des classes a partir de ce package
  * et ses sous-packages. Autrement formule, les classes qui sont en dehors de
  * cette arborescence ne seront pas trouvees donc ignorees.
  * <p>
