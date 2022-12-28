@@ -11,6 +11,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * Represente une entite metier "Profile".
+ * <p>
+ * Un "Profile" a ses propres proprietes et est compose optionnellement d'un
+ * "Language" prefere (association d'entites).
+ */
 @Entity
 @Table(name = "profiles")
 public class Profile {
@@ -35,13 +41,16 @@ public class Profile {
     @Column(name = "trainer")
     private boolean trainer;
 
+    // Many Profile To One language => Covers "One" Profile to "One" Language
+    // One Language To Many Profile
     @JoinColumn(name = "preferred_language_id")
-    // One Language to Many Profiles
-    // Many Profiles To One Language
-    // One Profile To One Language
     @ManyToOne
     private Language preferredLanguage;
 
+    /*
+     * updatable = false indique au framework de ne pas chercher a mettre a jour
+     * la donnee en base quand c'est pertinent de le faire.
+     */
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 

@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Represente une entite metier "Language".
+ */
 @Entity
 @Table(name = "languages")
 public class Language {
@@ -16,10 +19,15 @@ public class Language {
     @Column(name = "id")
     private Long id;
 
+    /*
+     * updatable = false indique au framework de ne pas chercher a mettre a jour
+     * la donnee en base quand c'est pertinent de le faire.
+     */
     @Column(name = "name", updatable = false)
     private String name;
 
     public Language() {
+	//
     }
 
     public Long getId() {

@@ -3,6 +3,10 @@ package co.simplon.profiles.dtos;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
+/**
+ * DTO qui represente les inputs pour creer un "Profile" avec ses contraintes de
+ * validation.
+ */
 public class ProfileCreateDto {
 
     @NotEmpty

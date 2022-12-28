@@ -1,9 +1,17 @@
 package co.simplon.profiles.dtos;
 
+import javax.validation.constraints.NotEmpty;
+
+/**
+ * DTO qui represente les inputs pour modifier un "Profile" avec ses contraintes
+ * de validation.
+ */
 public class ProfileUpdateDto {
 
+    @NotEmpty
     private String firstName;
 
+    @NotEmpty
     private String lastName;
 
     private boolean trainer;
@@ -38,8 +46,7 @@ public class ProfileUpdateDto {
 
     @Override
     public String toString() {
-	return "{firstName=" + firstName + ", lastName="
-		+ lastName + ", trainer=" + trainer + "}";
+	return "{firstName=" + firstName + ", lastName=" + lastName
+		+ ", trainer=" + trainer + "}";
     }
-
 }
